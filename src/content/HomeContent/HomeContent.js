@@ -8,10 +8,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Fab from '@material-ui/core/Fab';
 
-import GitHubCircleIcon from 'mdi-material-ui/GithubCircle';
-
-import EmptyState from '../../layout/EmptyState/EmptyState';
-
 import Dashboard from '../../components/Dashboard';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
