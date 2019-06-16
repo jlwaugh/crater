@@ -8,12 +8,18 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Fab from '@material-ui/core/Fab';
 
-import CodeIcon from '@material-ui/icons/Code';
-import HomeIcon from '@material-ui/icons/Home';
-
 import GitHubCircleIcon from 'mdi-material-ui/GithubCircle';
 
 import EmptyState from '../../layout/EmptyState/EmptyState';
+
+import Dashboard from '../../components/Dashboard';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { Grid } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
+
+import Puzzle from '../../components/Puzzle';
 
 const styles = (theme) => ({
   emptyStateIcon: {
@@ -39,32 +45,46 @@ class HomeContent extends Component {
 
     if (isSignedIn) {
       return (
-        <EmptyState
-          icon={<HomeIcon className={classes.emptyStateIcon} color="action" />}
-          title="Home"
-          description="Use React + Material-UI + Firebase as the starting-point for your project"
-          button={
-            <Fab className={classes.button} color="secondary" component={Link} to="/some-magic" variant="extended">
-              Click For Some Magic
-            </Fab>
-          }
-        />
+        <Dashboard />
       );
     }
 
+    function FormRow() {
+      return (
+        <React.Fragment>
+          <Grid item xs={4}>
+            <Paper className={classes.paper}>item</Paper>
+          </Grid>
+          <Grid item xs={4}>
+            <Paper className={classes.paper}>item</Paper>
+          </Grid>
+          <Grid item xs={4}>
+            <Paper className={classes.paper}>item</Paper>
+          </Grid>
+        </React.Fragment>
+      );
+    }
+  
     return (
-      <EmptyState
-        icon={<CodeIcon className={classes.emptyStateIcon} color="action" />}
-        title={title}
-        description="The three musketeers, all in one pack in the form of a boilerplate app"
-        button={
-          <Fab className={classes.button} color="secondary" href="https://github.com/Phoqe/react-material-ui-firebase" rel="noopener noreferrer" target="_blank" variant="extended">
-            <GitHubCircleIcon className={classes.buttonIcon} />
-            GitHub
-          </Fab>
-        }
-      />
-    );
+      <div className={classes.root}>
+      <Box my={5}>
+        <Puzzle />
+      </Box>
+      <Container>
+        <Grid container spacing={1}>
+          <Grid container item xs={12} spacing={3}>
+            <FormRow />
+          </Grid>
+          <Grid container item xs={12} spacing={3}>
+            <FormRow />
+          </Grid>
+          <Grid container item xs={12} spacing={3}>
+            <FormRow />
+          </Grid>
+        </Grid>
+      </Container>
+      </div>      
+    )
   }
 }
 

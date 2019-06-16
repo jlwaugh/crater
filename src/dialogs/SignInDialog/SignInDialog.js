@@ -89,13 +89,13 @@ class SignInDialog extends Component {
     return (
       <Dialog fullScreen={fullScreen} open={open} onClose={onClose} onExited={this.handleExited} onKeyPress={this.handleKeyPress}>
         <DialogTitle>
-          Sign in to your account
+          Log in to your account
         </DialogTitle>
 
         <DialogContent>
           <DialogContentText>
             Some features might be unavailable until you sign in.
-            While you're signed in you can manage your account.
+            While you're logged in you can manage your account.
           </DialogContentText>
 
           <AuthProviderList isPerformingAuthAction={isPerformingAuthAction} onAuthProviderClick={onAuthProviderClick} />

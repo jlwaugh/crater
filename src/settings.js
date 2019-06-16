@@ -23,7 +23,7 @@ import blueGray from '@material-ui/core/colors/blueGrey';
 /* eslint-enable no-unused-vars */
 
 const settings = {
-  title: 'React + Material-UI + Firebase',
+  title: 'CRATER',
 
   theme: {
     primaryColor: {
@@ -31,21 +31,21 @@ const settings = {
       import: blue
     },
     secondaryColor: {
-      name: 'red',
-      import: red
+      name: 'gray',
+      import: gray
     },
     type: 'light'
   },
 
   credentials: {
     firebase: {
-      apiKey: 'AIzaSyDYZOrZVpXkPQD6J31mb9t2eIIxmGEJK-Q',
-      authDomain: 'react-material-ui-firebase.firebaseapp.com',
-      databaseURL: 'https://react-material-ui-firebase.firebaseio.com',
-      projectId: 'react-material-ui-firebase',
-      storageBucket: 'react-material-ui-firebase.appspot.com',
-      messagingSenderId: '552659850812',
-      appId: '1:552659850812:web:d685f74f72161d96'
+      apiKey: 'AIzaSyA1d4HIZIhghVYjL7uMYX9v1tIBohujjIg',
+      authDomain: 'https://crater888.firebaseio.com',
+      databaseURL: 'https://crater888.firebaseio.com',
+      projectId: 'crater888',
+      storageBucket: 'gs://crater888.appspot.com',
+      messagingSenderId: '792762201871',
+      appId: '1:792762201871:web:73f701f2445e9623'
     }
   },
 
